@@ -11,12 +11,6 @@ Read the [full documentation on Github pages](https://huyenngn.github.io/kitchen
 
 # Installation
 
-You can install the latest released version directly from PyPI.
-
-```sh
-pip install kitchengpt
-```
-
 To set up a development environment, clone the project and install it into a
 virtual environment.
 
