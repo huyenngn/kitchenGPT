@@ -25,7 +25,7 @@ jobs:
 
             - name: Start FastAPI app
               run: |
-                  uvicorn app.main:app --host 127.0.0.1 --port 8000 &
+                  python -m kitchengpt &
                   sleep 10 # Give the server time to start
 
             - name: Download Swagger UI HTML
