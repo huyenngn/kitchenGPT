@@ -23,7 +23,7 @@ source .venv/bin/activate.sh  # for Linux / Mac
 .venv\Scripts\activate  # for Windows
 
 pip install -U pip pre-commit
-pip install -e '.[docs,test]'
+pip install -e '.[dev,test]'
 pre-commit install
 ```
 
