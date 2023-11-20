@@ -35,8 +35,7 @@ jobs:
                   curl http://127.0.0.1:8000/openapi.json -o public/openapi.json
             - name: Update Swagger UI HTML for GitHub Pages
               run: |
-                  sed -i 's|url: "/openapi.json"|url: "./openapi.json"|' public/index.html
-                  sed -i "s|url: '/openapi.json'|url: './openapi.json'|" public/index.html
+                  sed -i 's|/openapi.json|./openapi.json|' public/index.html
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3

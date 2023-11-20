@@ -64,7 +64,7 @@ jobs:
                   context: .
                   file: ./Dockerfile
                   push: true
-                  tags: yourusername/yourappname:latest
+                  tags: huyenngn/kitchgpt:latest
                   build-args: |
                       BUILDKIT_INLINE_CACHE=1
 
@@ -75,6 +75,6 @@ jobs:
                   context: .
                   file: ./Dockerfile
                   push: true
-                  tags: yourusername/yourappname:${{ github.ref_name }}
+                  tags: huyenngn/kitchgpt:${{ github.ref_name }}
                   build-args: |
                       BUILDKIT_INLINE_CACHE=1

@@ -25,7 +25,10 @@ classifiers = [
 dependencies = [
   "fastapi",
   "uvicorn[standard]",
-  "asyncpg"
+  "asyncpg",
+  "openai",
+  "python-dotenv",
+
 ]
 
 [project.urls]
@@ -34,7 +37,6 @@ Documentation = "https://huyenngn.github.io/kitchengpt"
 
 [project.optional-dependencies]
 dev = [
-    "python-dotenv",
 ]
 
 test = [
