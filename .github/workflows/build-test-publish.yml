@@ -62,9 +62,9 @@ jobs:
               uses: docker/build-push-action@v2
               with:
                   context: .
-                  file: ./Dockerfile
+                  file: ./docker/Dockerfile
                   push: true
-                  tags: huyenngn/kitchgpt:latest
+                  tags: huyenngn/kitchengpt:latest
                   build-args: |
                       BUILDKIT_INLINE_CACHE=1
 
@@ -73,8 +73,8 @@ jobs:
               uses: docker/build-push-action@v2
               with:
                   context: .
-                  file: ./Dockerfile
+                  file: ./docker/Dockerfile
                   push: true
-                  tags: huyenngn/kitchgpt:${{ github.ref_name }}
+                  tags: huyenngn/kitchengpt:${{ github.ref_name }}
                   build-args: |
                       BUILDKIT_INLINE_CACHE=1

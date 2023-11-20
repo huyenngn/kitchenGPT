@@ -24,6 +24,8 @@ jobs:
                   python -m pip install .
 
             - name: Start FastAPI app
+              env:
+                  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
               run: |
                   python -m kitchengpt &
                   sleep 10 # Give the server time to start

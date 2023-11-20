@@ -2,7 +2,11 @@ version: '3.8'
 
 services:
     web:
-        build: .
+        env_file:
+            - ../.env
+        build:
+            context: ..
+            dockerfile: docker/Dockerfile
         volumes:
             - .:/app
         ports:
@@ -15,6 +19,7 @@ services:
     db:
         image: postgres:13
         volumes:
+            - ./postgres-init:/docker-entrypoint-initdb.d
             - postgres_data:/var/lib/postgresql/data
         environment:
             POSTGRES_USER: kitchengpt_user

@@ -3,11 +3,19 @@
 ![image](https://github.com/huyenngn/kitchengpt/actions/workflows/build-test-publish.yml/badge.svg)
 ![image](https://github.com/huyenngn/kitchengpt/actions/workflows/lint.yml/badge.svg)
 
-Backend for smart fridge and smart oven operations at ZEKI.
+Backend for smart fridge and smart oven operations at ZEKI [available on Docker Hub](https://hub.docker.com/r/huyenngn/kitchengpt).
 
 # Documentation
 
 Read the [full documentation on Github pages](https://huyenngn.github.io/kitchengpt).
+
+# Usage
+
+From the project's root directory, run:
+
+```
+docker-compose -f docker/docker-compose.yml up -d
+```
 
 # Installation
 
