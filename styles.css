@@ -8755,7 +8755,7 @@
     padding: 4px 30px;
 }
 .swagger-ui .info {
-    margin: 50px 0 25px 0;
+    margin: 50px 0 20px 0;
 }
 .swagger-ui .info.failed-config {
     margin-left: auto;
@@ -8764,7 +8764,7 @@
     text-align: center;
 }
 .swagger-ui .info hgroup.main {
-    margin: 50px 0 20px 0;
+    margin: 0 0 20px;
 }
 .swagger-ui .info hgroup.main a {
     font-size: 12px;
@@ -8809,11 +8809,19 @@
     font-weight: 600;
     margin: 0;
 }
+.swagger-ui .info h1 {
+    font-size: 36px;
+}
+
+.swagger-ui .info h2 {
+    font-size: 26px;
+}
 .swagger-ui .info .title {
     color: #3b4151;
     font-family: sans-serif;
     margin: 0;
 }
+
 .swagger-ui .info .title small {
     background: #7d8492;
     border-radius: 57px;
