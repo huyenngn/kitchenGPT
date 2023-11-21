@@ -20,7 +20,7 @@ OPENAI_API_KEY=<youropenaikey>
 From the project's root directory, run:
 
 ```
-docker-compose -f deploy/docker-compose.yml up -d
+docker-compose -f deploy/docker-compose.yml up -d --build
 ```
 
 To stop, run:

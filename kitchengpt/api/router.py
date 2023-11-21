@@ -2,15 +2,15 @@
 
 from fastapi import APIRouter
 
-from .v1 import fridge, oven
+from .endpoints import fridge, oven
 
 api_router = APIRouter()
 
 
 @api_router.get("/", tags=["Chat"])
-async def root():
-    """Root endpoint."""
-    return {"message": "Welcome to kitchenGPT API"}
+async def root(text: str):
+    """Chat endpoint."""
+    return {"message": text}
 
 
 api_router.include_router(fridge.router, prefix="/fridge", tags=["Fridge"])

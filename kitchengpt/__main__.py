@@ -34,8 +34,28 @@ async def lifespan(app_: FastAPI):
 
 
 app = FastAPI(
-    title="kitchenGPT",
+    title="KitchenGPT REST API",
+    version="0.1.0",
+    summary="Deadpond's favorite app. Nuff said.",
+    description="""ChimichangApp API helps you do awesome stuff. 🚀
+
+                ## Items
+
+                You can **read items**.
+
+                ## Users
+
+                You will be able to:
+
+                * **Create users** (_not implemented_).
+                * **Read users** (_not implemented_).
+
+                """,
     openapi_tags=tags_metadata,
+    license_info={
+        "name": "Apache 2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+    },
     lifespan=lifespan,
 )
 
