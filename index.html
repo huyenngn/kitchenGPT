@@ -1,47 +1,31 @@
-<!DOCTYPE html>
-<html>
+
+    <!DOCTYPE html>
+    <html>
     <head>
-        <link type="text/css" rel="stylesheet" href="styles.css" />
-        <link rel="shortcut icon" href="public/favicon.png" />
-        <title>KitchenGPT - Documentation</title>
+    <title>KitchenGPT REST API - ReDoc</title>
+    <!-- needed for adaptive design -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="https://fastapi.tiangolo.com/img/favicon.png">
+    <!--
+    ReDoc doesn't change outer page styles
+    -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
     </head>
     <body>
-        <div class="swagger-ui">
-            <div class="information-container wrapper">
-                <div class="info">
-                    <hgroup class="main">
-                        <h1 class="title">KitchenGPT</h1>
-                    </hgroup>
-                    <div class="description">Hello</div>
-                    <hgroup class="main">
-                        <h2 class="title">Introduction</h2>
-                    </hgroup>
-                    <div class="description">Hello</div>
-                    <hgroup class="main">
-                        <h2 class="title">Installation</h2>
-                    </hgroup>
-                    <div class="description">API documentation</div>
-                </div>
-            </div>
-        </div>
-        <div id="swagger-ui"></div>
-        <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5.9.0/swagger-ui-bundle.js"></script>
-        <!-- `SwaggerUIBundle` is now available on the page -->
-        <script>
-            const ui = SwaggerUIBundle({
-                url: './public/openapi.json',
-                dom_id: '#swagger-ui',
-                layout: 'BaseLayout',
-                deepLinking: true,
-                showExtensions: true,
-                showCommonExtensions: true,
-                oauth2RedirectUrl:
-                    window.location.origin + '/docs/oauth2-redirect',
-                presets: [
-                    SwaggerUIBundle.presets.apis,
-                    SwaggerUIBundle.SwaggerUIStandalonePreset,
-                ],
-            });
-        </script>
+    <noscript>
+        ReDoc requires Javascript to function. Please enable it to browse the documentation.
+    </noscript>
+    <redoc spec-url="/openapi.json"></redoc>
+    <script src="https://cdn.jsdelivr.net/npm/redoc@next/bundles/redoc.standalone.js"> </script>
     </body>
-</html>
+    </html>
+    
