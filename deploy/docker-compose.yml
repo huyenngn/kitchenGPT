@@ -6,7 +6,7 @@ services:
             - ../.env
         build:
             context: ..
-            dockerfile: docker/Dockerfile
+            dockerfile: deploy/Dockerfile
         volumes:
             - .:/app
         ports:

@@ -62,7 +62,7 @@ jobs:
               uses: docker/build-push-action@v2
               with:
                   context: .
-                  file: ./docker/Dockerfile
+                  file: ./deploy/Dockerfile
                   push: true
                   tags: huyenngn/kitchengpt:latest
                   build-args: |
@@ -73,7 +73,7 @@ jobs:
               uses: docker/build-push-action@v2
               with:
                   context: .
-                  file: ./docker/Dockerfile
+                  file: ./deploy/Dockerfile
                   push: true
                   tags: huyenngn/kitchengpt:${{ github.ref_name }}
                   build-args: |

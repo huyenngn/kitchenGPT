@@ -23,24 +23,15 @@ jobs:
               run: |
                   python -m pip install .
 
-            - name: Start FastAPI app
+            - name: Generate API Documentation
               env:
                   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+              working-directory: ./docs
               run: |
-                  python -m kitchengpt &
-                  sleep 10 # Give the server time to start
-
-            - name: Download Swagger UI HTML
-              run: |
-                  mkdir -p public
-                  curl http://127.0.0.1:8000/docs -o public/index.html
-                  curl http://127.0.0.1:8000/openapi.json -o public/openapi.json
-            - name: Update Swagger UI HTML for GitHub Pages
-              run: |
-                  sed -i 's|/openapi.json|./openapi.json|' public/index.html
+                  make generate-api-docs
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./public
+                  publish_dir: ./docs/src

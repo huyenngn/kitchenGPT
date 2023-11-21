@@ -10,28 +10,6 @@ import kitchengpt
 from kitchengpt.api.router import api_router
 from kitchengpt.config import settings
 
-description = """
-    Backend for smart fridge and smart oven operations at ZEKI. 🚀
-
-    ## Installation
-
-    To set up a development environment, clone the project and install it into a
-    virtual environment.
-
-    ```sh
-    git clone https://github.com/huyenngn/kitchengpt
-    cd kitchengpt
-    python -m venv .venv
-
-    source .venv/bin/activate.sh  # for Linux / Mac
-    .venv\\Scripts\\activate  # for Windows
-
-    pip install -U pip pre-commit
-    pip install -e '.[dev,test]'
-    pre-commit install
-    ```
-    """
-
 tags_metadata = [
     {
         "name": "Chat",
@@ -57,7 +35,6 @@ async def lifespan(app_: FastAPI):
 
 app = FastAPI(
     title="kitchenGPT",
-    description=description,
     openapi_tags=tags_metadata,
     lifespan=lifespan,
 )

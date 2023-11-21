@@ -11,10 +11,22 @@ Read the [full documentation on Github pages](https://huyenngn.github.io/kitchen
 
 # Usage
 
+Create a .env file:
+
+```
+OPENAI_API_KEY=<youropenaikey>
+```
+
 From the project's root directory, run:
 
 ```
-docker-compose -f docker/docker-compose.yml up -d
+docker-compose -f deploy/docker-compose.yml up -d
+```
+
+To stop, run:
+
+```
+docker-compose -f deploy/docker-compose.yml down -v
 ```
 
 # Installation
